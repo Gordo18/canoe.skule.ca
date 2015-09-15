@@ -4,7 +4,7 @@
             {% if include.title %}<h3>{{ include.title }}</h3>{% endif %}
             {% for client in site.clients limit:include.limit %}
                 <div class="col-lg-3 col-md-3 col-sm-3">
-                    <img src="{{ "/assets/img/clients/" | prepend: site.baseurl }}{{ client.img }}" class="img-responsive">
+                    <img src="{{ "/assets/img/sponsors/" | prepend: site.baseurl }}{{ client.img }}" class="img-responsive">
                 </div>
             {% endfor %}
         </div><! --/row -->

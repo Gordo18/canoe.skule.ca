@@ -439,6 +439,10 @@ csmall {
 	margin-bottom: 40px;
 }
 
+.spacingex {
+	padding-bottom: 18vh;
+}
+
 .badge-theme {
 	background: {{ site.colors.primary }};
 }

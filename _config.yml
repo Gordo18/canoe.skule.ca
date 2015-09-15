@@ -26,20 +26,17 @@ exclude: ['README']
 # Social networks usernames. Many more available: google-plus, flickr, linkedin, etc). Shown in footer.
 social:
   - title: facebook
-    url:
+    url: https://www.facebook.com/University-of-Toronto-Concrete-Canoe-Team-213195255385780/
   - title: twitter
-    url: 
-  - title: youtube
-    url: 
+    url: https://twitter.com/utcanoe
     
 # Postal address (add as many lines as necessary). Shown in footer and on Contact page.
 address:
   - lines: 
-    - Some Ave, 987,
-    - 23890, New York,
-    - United States.
-email: hello@solidtheme.com
-tel: +34 8493-4893
+    - 704 Spadina Ave,
+    - Toronto, Ontario
+    - Canada
+email: ut.canoe@gmail.com
 
 
 ### GENERAL DATA FOR VARIOUS LOCATIONS ###
@@ -94,16 +91,9 @@ members:
     
 # Clients information. Shown on Home and About pages.
 clients:
-  - name: dribbble
-    img: client01.png
-  - name: Code is Poetry
-    img: client02.png
-  - name: Vimeo
-    img: client03.png
-  - name: VimeoPro
-    img: client04.png
-  - name: VimeoPro
-    img: client04.png
+  - name: Chemical Engineering
+    img: chem.jpg
+    url: chem.com
     
 # Short text about your company. Shown in footer on every page and also separately on Home and Contact page.
 about: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."

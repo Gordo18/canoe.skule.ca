@@ -4,31 +4,30 @@ title: Home
 permalink: /
 ---
 
-{% include testimonial.html %}
-
-<div id="service">
-    <div class="container">
-        <div class="row centered">
-            <div class="col-md-4">
-                <i class="fa fa-heart-o"></i>
-                <h4>Handsomely Crafted</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p><br/><a href="#" class="btn btn-theme">More Info</a></p>
+<div id="twrap">
+    <div id="twrapback"></div>
+    <div class="container centered">
+        <div class="row">
+	    <div class="spacingex"></div>
+	    <div class="col-md-4">
+                <h1>DESIGN</h1>
             </div>
             <div class="col-md-4">
-                <i class="fa fa-flask"></i>
-                <h4>Retina Ready</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p><br/><a href="#" class="btn btn-theme">More Info</a></p>
+                <h1>CAST</h1>
             </div>
             <div class="col-md-4">
-                <i class="fa fa-trophy"></i>
-                <h4>Quality Theme</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p><br/><a href="#" class="btn btn-theme">More Info</a></p>
-            </div>		 				
+                <h1>RACE</h1>
+            </div>
+            <br /><br /><br /><br />
         </div>
+	<div class="row">
+	    <div class="spacingex"></div>
+	    <div class="col-lg-8 col-lg-offset-2">
+		<h2>University of Toronto Concrete Canoe</h2>
+                <h4><br/>{{ site.description }}</h4>
+	    </div>
+        </div><! --/row -->
     </div><! --/container -->
-</div><! --/service -->
+</div><! --/twrap -->
 
-{% include clients.html title="OUR SPONSORS" limit=4 %}
+{% include sponsors.html title="OUR SPONSORS" limit=4 %}
