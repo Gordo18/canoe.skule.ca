@@ -11,18 +11,28 @@ layout: default
             <div class="spacing"></div>
 
             {{ content }}
+            {% if page.members %}
+            <p><h4>Team Members:</h4>
+                <ul>{% for m in page.members %}<li>{{m}}</li>{% endfor %}
+                </ul>
+            </p>
+            {% endif %}
 
         </div>
         <div class="col-lg-4 col-lg-offset-1">
             <div class="spacing"></div>
             <h4>Project Details</h4>
             <div class="hline"></div>
-            <p><b>Date:</b> {{ page.date | date: "%b %-d, %Y" }}</p>
-            <p><b>Author:</b> {{ page.author }}</p>
-            <p><b>Categories:</b> {{ page.categories }}</p>
-            <p><b>Tagged:</b> Flat, UI, Development</p>
-            <p><b>Client:</b> {{ page.client }}</p>
-            <p><b>Website:</b> <a href="{{ page.website }}">{{ page.website }}</a></p>
+            <p><b>Class Year:</b> {{ page.title | upcase }} </p>
+            <p><b>Status:</b> {{ page.status }} </p>
+            <p><b>Theme:</b> {{ page.theme }} </p>
+            <p><b>Placement at CNCC {{ page.date | date: "%Y" | plus: '1' }}:</b> {{ page.placement }} </p>
+            <p><b>Length:</b> {{ page.length }} </p>
+            <p><b>Weight:</b> {{ page.weight }}</p>
+            <p><b>Awards:</b> {{ page.award.first }}{% for a in page.award offset:1 %}, {{a}}{% endfor %} </p>
+            <p><b>Project Managers:</b> {{ page.managers.first }}{% for m in page.managers offset:1 %}, {{m}}{% endfor %} </p>
+            <div class="hline"></div>
+            <div class="spacing"></div>
         </div>
     </div><! --/row -->
 </div><! --/container -->
