@@ -3,10 +3,8 @@ layout: project
 title:  "YOUR PROJECT NAME"
 date:   2014-04-25 16:54:46
 author: Marcel Newman
-categories:
-- project
-img: portfolio_03.jpg
-thumb: thumb02.jpg
+categories: canoes
+img: portfolio_01.jpg
 carousel:
 - single01.jpg
 - single02.jpg

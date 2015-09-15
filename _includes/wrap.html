@@ -1,7 +1,9 @@
+{% if page.title != 'Home' %}
 <div id="blue">
     <div class="container">
-        <div class="row">
+        <div class="row text-center">
             <h3>{% if page.wrap_title %}{{ page.wrap_title }}{% else %}{{ page.title }}{% endif %}</h3>
         </div><!-- /row -->
     </div> <!-- /container -->
 </div><!-- /blue -->
+{% endif %}

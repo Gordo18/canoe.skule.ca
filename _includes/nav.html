@@ -12,11 +12,18 @@
     </div>
     <div class="navbar-collapse collapse navbar-right">
       <ul class="nav navbar-nav">
-        <li {% if page.title == "Home" %}class="active"{% endif %}><a href="{{"/" | prepend: site.baseurl }}">HOME</a></li>
-        <li {% if page.title == "Blog" %}class="active"{% endif %}><a href="{{"/blog/" | prepend: site.baseurl }}">BLOG</a></li>
-        <li {% if page.title == "Portfolio" %}class="active"{% endif %}><a href="{{"/portfolio/" | prepend: site.baseurl }}">PORTFOLIO</a></li>
-        <li {% if page.title == "About" %}class="active"{% endif %}><a href="{{"/about/" | prepend: site.baseurl }}">ABOUT</a></li>
-        <li {% if page.title == "Contact" %}class="active"{% endif %}><a href="{{"/contact/" | prepend: site.baseurl }}">CONTACT</a></li>
+        <li {% if page.title == "Past Canoes" %}class="active"{% endif %}><a href="{{"/canoe/" | prepend: site.baseurl }}">PAST CANOES</a></li>
+        <li class="dropdown {% if page.title == "Canoe Development" %}active{% endif %}">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">DEVELOPMENT <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+                <li><a href="{{"/development/" | prepend: site.baseurl }}">BLOG</a></li>
+                <li><a href="{{"/development/" | prepend: site.baseurl }}">SINGLE POST</a></li>
+                <li><a href="{{"/development/" | prepend: site.baseurl }}">PORTFOLIO</a></li>
+                <li><a href="{{"/development/" | prepend: site.baseurl }}">SINGLE PROJECT</a></li>
+            </ul>
+		</li>
+        <li {% if page.title == "Our Sponsors" %}class="active"{% endif %}><a href="{{"/sponsors/" | prepend: site.baseurl }}">SPONSORS</a></li>
+        <li {% if page.title == "About Our Team" %}class="active"{% endif %}><a href="{{"/about/" | prepend: site.baseurl }}">ABOUT</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
