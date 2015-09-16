@@ -2,9 +2,10 @@
     <div class="container">
         <div class="row centered">
             {% if include.title %}<h3>{{ include.title }}</h3>{% endif %}
-            {% for client in site.clients limit:include.limit %}
+            {% for sponsor in site.sponsors limit:include.limit %}
                 <div class="col-lg-3 col-md-3 col-sm-3">
-                    <img src="{{ "/assets/img/sponsors/" | prepend: site.baseurl }}{{ client.img }}" class="img-responsive">
+                    <a href={{ sponsor.url }}><img src="{{ "/assets/img/sponsors/" | prepend: site.baseurl }}{{ sponsor.img }}" class="img-responsive">
+                    <p>{{ sponsor.name }}</p></a>
                 </div>
             {% endfor %}
         </div><! --/row -->
