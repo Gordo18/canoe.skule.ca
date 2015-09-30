@@ -108,7 +108,15 @@ a:focus {
 .navbar-brand {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 900;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
+
+.navbar-brand img {
+    padding: 2px 17px 2px 0px;
+    height: 100%;
+}
+
 
 .navbar-header .navbar-brand {
 	color: white;
@@ -155,7 +163,7 @@ a:focus {
 .btn-theme:active,
 .btn-theme.active,
 .open .dropdown-toggle.btn-theme {
-  color: #fff;
+  color: {{ site.colors.secondary }};
   background-color: {{ site.colors.primary }};
   border-color: {{ site.colors.primary }};
 }
@@ -163,14 +171,18 @@ a:focus {
 .dmbutton:hover,
 .dmbutton:active,
 .dmbutton:focus{
-	color: #ffffff;
-	background-color: #222222;
-	border-color: #ffffff;
+	background-color: {{ site.colors.primary }};
 }
+
+
+.dmbutton i {
+	color: {{ site.colors.secondary }};
+}
+
 .dmbutton {
 	background:rgba(0, 0, 0, 0);
-	border: 1px solid #ffffff;
-	color: #ffffff;
+	border: 1px solid {{ site.colors.secondary }};
+	color: {{ site.colors.secondary }};
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
 	padding-top: 1.025rem;
@@ -192,6 +204,7 @@ a:focus {
 	-webkit-appearance: none;
 	font-weight: normal !important;
 }
+
 
 .mtb {
 	margin-top: 80px;
@@ -282,7 +295,7 @@ a:focus {
 
 .tpl6 h3
 {
-	color:#fff;
+	color:{{ site.colors.secondary }};
 	margin:0;
 	padding:40px 5px 0;
 	font-size:16px;
@@ -292,7 +305,8 @@ a:focus {
 {
 	display:inline-block;
 	margin:30px 5px 20px 5px;
-	font-size:13px;
+    font-size:13px;
+    border: 1px solid {{ site.colors.secondary }};
 }
 
 .tpl6 .bg
@@ -323,9 +337,8 @@ a:focus {
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 450px;
-    height: 100vh;
-	width: 100%;
+	min-height: 700px;
+    width: 100%;
 	
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -392,6 +405,10 @@ a:focus {
 ################################################################# */
 /* General Tweaks */
 
+.spacingex {
+    padding-bottom: 150px;
+}
+
 #blue {
 	background: {{ site.colors.primary }};
 	margin-top: 50px;
@@ -401,7 +418,7 @@ a:focus {
 }
 
 #blue h3 {
-	color: white;
+	color: {{ site.colors.secondary }};
 	margin-left: 15px;
 }
 
@@ -428,8 +445,8 @@ a:focus {
 }
 
 .ctitle {
-	color: {{ site.colors.primary }};
-	font-weight: 700;
+	color: #000;
+	font-weight: 800;
 	margin-bottom: 15px;
 }
 
@@ -441,10 +458,6 @@ csmall {
 .spacing {
 	margin-top: 40px;
 	margin-bottom: 40px;
-}
-
-.spacingex {
-	padding-bottom: 18vh;
 }
 
 .badge-theme {

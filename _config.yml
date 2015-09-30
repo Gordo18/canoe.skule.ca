@@ -3,19 +3,20 @@
 title: Concrete Canoe
 description: "The University of Toronto Concrete Canoe Team is a multi-disciplinary design team completely managed by students. As you may expect we take concrete, a really dense and tensilely weak material, and turn it on its head. When we are done with it, we have concrete that is not only good in tension but also less dense than water! Each year we design, test, and construct our own canoe to pit it against other universities annually and aim to place among the top concrete canoe teams."
 analytics: #Google analytics code in the format XX-nnnnnnnn-n
+senpai: Henry Lu
 
 markdown: kramdown
 permalink: /:categories/:title
 excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
 
 colors:  #in hex code if not noted else
-  primary: "#FAE632" #"#00b3fe" 
-  primary_rgb: "250,230,50" # "0,179,254"#rgb of the primary. Needed in some places for the transparency effect.  
-  secondary: "#4090FF" #"#384452" #"#33004D"
+  primary: "#FFC90E" #"#00b3fe" 
+  primary_rgb: "250,250,250" # "0,179,254"#rgb of the primary. Needed in some places for the transparency effect.  
+  secondary: "#33004D" #"#384452" #"#33004D"
   link: "#428bca"
   link_hover: "#01b2fe"
   footer_heading: "#ffffff"
-  footer_content: "#111"
+  footer_content: "#ffffff"
 
 exclude: ['README']  
 

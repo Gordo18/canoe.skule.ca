@@ -5,7 +5,7 @@
             {% for sponsor in site.sponsors limit:include.limit %}
                 <div class="col-lg-3 col-md-3 col-sm-3">
                     <a href={{ sponsor.url }}><img src="{{ "/assets/img/sponsors/" | prepend: site.baseurl }}{{ sponsor.img }}" class="img-responsive">
-                    <p>{{ sponsor.name }}</p></a>
+                    <br />{{ sponsor.name }}<br /><br /></a>
                 </div>
             {% endfor %}
         </div><! --/row -->
