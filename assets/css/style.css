@@ -234,7 +234,6 @@ a:focus {
 /*	################################################################
 	SITE WRAPS
 ################################################################# */
-
 #headerwrap {
 	background-color: {{ site.colors.primary }};
 	min-height: 0px;
@@ -528,4 +527,34 @@ a.anchor{
     position: relative; 
     top: -80px; 
     visibility: hidden;
+}
+
+/*	################################################################
+	MISC
+################################################################# */
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: {{site.colors.secondary}};
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #DDD;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+	color: {{site.colors.primary}};
+}
+
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+	background-color: {{site.colors.primary}};
+}
+
+.frontal {
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 	35px;
+}
+
+.frontal h4 {
+	padding-bottom: 10px;
 }
