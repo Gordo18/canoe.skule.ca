@@ -404,7 +404,7 @@ a:focus {
 /* General Tweaks */
 
 .spacingex {
-    padding-bottom: 150px;
+    padding-bottom: 163px;
 }
 
 #blue {
@@ -550,11 +550,20 @@ a.anchor{
 	background-color: {{site.colors.primary}};
 }
 
-.frontal {
-	background: rgba(255, 255, 255, 0.9);
-	border-radius: 	35px;
+.fdes {
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 10px;	
 }
 
-.frontal h4 {
-	padding-bottom: 10px;
+.fdes h4, .ftop h1 {
+	margin-bottom: 20px;
+}
+
+.ftop {
+	background: rgba(255, 255, 255, 0.8);
+	position: absolute;
+	width: 100%;
+	top:0px;
+	left:0px;
+	margin:0px;
 }
