@@ -2,6 +2,7 @@ $(document).ready(miscelements);
 
 function miscelements(){
 	//$("#design").hover(din, dout);
+	intro();
 	pretty();
 }
 
@@ -19,4 +20,10 @@ function pretty(){
 		jQuery(this).attr('rel', jQuery(this).data('gal'));
 	});  	
 	jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({animationSpeed:'slow',theme:'light_square',slideshow:false,overlay_gallery: false,social_tools:false,deeplinking:false});
+}
+
+function intro(){
+	setTimeout(function(){ 
+		$(".fdes").fadeIn(1000);
+	}, 1000);
 }
