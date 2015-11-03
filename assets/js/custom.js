@@ -101,7 +101,8 @@ function resetGrid() {
 
 // isotope filter: changes the filter value, and returns a function that regex search on them.
 function filterList() {
-	var y = $('.iso-year button.active').attr('data-iso-filter') || "2014";
+	var y = $('.iso-year button.active').attr('data-iso-filter')
+    if (y == ' ') { y = '';} else {y = y || "2014"};
 	var t = $('.iso-tier button.active').attr('data-iso-filter') || "";
 	filter = y + t;
 	return function() { var r = new RegExp(filter, 'g'); var n = $(this).find('.iso-data').text(); return n.match(r); };
