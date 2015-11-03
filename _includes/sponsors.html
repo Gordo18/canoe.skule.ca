@@ -1,7 +1,7 @@
 <div id="cwrap">
+    {% if include.title %}<h3 class="text-center">{{ include.title }}</h3>{% endif %}
     <div class="container">
         <div class="sponsor row centered">
-            {% if include.title %}<h3>{{ include.title }}</h3>{% endif %}
             {% for sponsor in site.data.sponsors limit:include.limit %}
                 <a href={{ sponsor.url }}>
 				<div class="col-lg-3 col-md-3 col-sm-3 sponsor-item">
