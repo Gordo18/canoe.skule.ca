@@ -268,11 +268,11 @@ a:focus {
 	padding: 15px;
 }
 
-.tpl6 h3
+.tpl6 h3, .tpl6 h4
 {
 	color:{{ site.colors.secondary }};
 	margin:0;
-	padding:40px 5px 0;
+	padding:30px 5px 0;
 	font-size:16px;
 	text-transform:uppercase;
 }

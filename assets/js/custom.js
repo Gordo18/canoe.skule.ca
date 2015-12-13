@@ -4,7 +4,7 @@ var $cgrid = $('.canoe').isotope({
 	itemSelector: '.canoe-item',
 	layoutMode: 'fitRows',
 	getSortData: {year:'.iyear',name:'.iname',status:'.istatus',stand:'.istand',length:'.ilength',weight: '.iweight'},
-	sortAscending: {year:false,name:true,status:true,stand:true,length:false,weight:false},
+	sortAscending: {year:false,name:true,status:false,stand:true,length:false,weight:false},
 });
 
 var $sgrid = $('.sponsor').isotope({
@@ -17,7 +17,7 @@ var filter = "";
 $(window).on('resize', resetGrid);
 	
 function miscelements(){
-	//$("#design").hover(din, dout);
+	// $("#design").hover(din, dout);
 	introFade();
 	prettyGallery();
 	resetGrid();
@@ -28,6 +28,12 @@ function miscelements(){
 		$cgrid.isotope({ sortBy: sortValue });
 		$('.iso-sort button.active').removeClass("active");
 		$(this).addClass('active');
+        $('.canoe>.canoe-item').each(function() {
+        // I could use .canoe-item but the meaning is clearer.
+            var str = $(this).find(".i"+sortValue).text();
+            if (sortValue == "name") str="";
+            $(this).find(".info").html(str);
+        });
 	});
 	
 	// isotope sponsor filter
@@ -58,7 +64,7 @@ function dout(){
 
 function introFade(){
 	setTimeout(function(){ 
-		$(".fdes").fadeIn(5000);
+		$(".fdes").fadeIn(3000,"swing");
 	}, 1000);
 }
 
