@@ -545,3 +545,8 @@ a.anchor{
 	left:0px;
 	margin:0px;
 }
+
+.carousel-inner, .carousel-inner img {
+    max-height: 450px !important;
+    width: auto;
+}

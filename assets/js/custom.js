@@ -21,7 +21,7 @@ function miscelements(){
 	introFade();
 	prettyGallery();
 	resetGrid();
-	
+
 	// isotope sort canoes
 	$('.iso-sort').on( 'click', 'button', function() {
 		var sortValue = $(this).attr('data-iso-sort');
@@ -50,7 +50,9 @@ function miscelements(){
 		$(this).addClass('active');
 		filterValue = filterList();
 		$sgrid.isotope({ filter: filterValue });
-	});	
+	});
+
+
 }
 
 /*function din(){
@@ -64,7 +66,7 @@ function dout(){
 
 function introFade(){
 	setTimeout(function(){ 
-		$(".fdes").fadeIn(3000,"swing");
+		$(".fdes").fadeIn(4500,"swing");
 	}, 1000);
 }
 
@@ -97,12 +99,16 @@ function setColumns() {
 	$cgrid.find('.canoe-item').each(function() { 
 		$(this).css("width", itemWidth);
 	});
+	$sgrid.find('.canoe-item').each(function() { 
+		$(this).css("width", itemWidth);
+	});
 }
 
 // isotope sort: called on document ready and on window resize
 function resetGrid() { 
 	setColumns();
 	$cgrid.isotope('layout');
+    $sgrid.isotope('layout');
 }
 
 // isotope filter: changes the filter value, and returns a function that regex search on them.
