@@ -6,10 +6,10 @@ permalink: /about/
 
 <div class="container mtb">
     <div class="row">
-        <div class="col-lg-6">
-            <img class="img-responsive" src="{{ "/assets/img/about.jpg" | prepend: site.baseurl }}" alt="">
+        <div class="col-sm-6">
+            <img class="img-responsive" src="{{ '/assets/img/about.jpg' | prepend: site.baseurl }}" alt="">
         </div>
-        <div class="col-lg-6">
+        <div class="col-sm-6">
             <h4>University of Toronto Concrete Canoe</h4>
             <p>{{ site.description }}</p>
             <p><br/><a href="/contact/" class="btn btn-theme">Contact Us</a></p>
@@ -22,9 +22,9 @@ permalink: /about/
         <h3 class="mb">MEET OUR TEAM</h3>
         
         {% for member in site.members %}
-        <div class="col-lg-3 col-md-3 col-sm-3 mug">
-            <div class="he-wrap tpl6">
-            <img src="{{ "/assets/img/members/" | prepend: site.baseurl }}{{ member.img }}" alt="">
+        <div class="col-sm-4 col-md-3 mug">
+            <div class="tpl6">
+            <img src="{{ '/assets/img/members/' | prepend: site.baseurl }}{{ member.img }}" alt="">
                 <div class="he-view">
                     <div class="bg a0" data-animate="fadeIn">
                         <h3 class="a1" data-animate="fadeInDown">Contact Me</h3>
@@ -32,8 +32,8 @@ permalink: /about/
                             <a href="{{ entry.url }}" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-{{ entry.title }}"></i></a>
                         {% endfor %}
                     </div><!-- he bg -->
-                </div><!-- he view -->		
-            </div><!-- he wrap -->
+                </div><!-- he-view -->		
+            </div><!-- OPTIONAL CLASS: he-wrap -->
             <h4>{{ member.name }}</h4>
             <h5 class="ctitle">{{ member.position }}</h5>
             <p>{{ member.text }}</p>

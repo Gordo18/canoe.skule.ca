@@ -52,7 +52,7 @@ function miscelements(){
 		$sgrid.isotope({ filter: filterValue });
 	});
 
-
+	setTimeout(resetGrid,2000);
 }
 
 /*function din(){
