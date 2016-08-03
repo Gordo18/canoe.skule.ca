@@ -8,6 +8,7 @@ senpai: Henry Lu
 markdown: kramdown
 permalink: /:categories/:title
 excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
+baseurl: "/canoe.skule.ca"
 
 colors:  #in hex code if not noted else
   primary: "#FFC90E" #00b3fe 

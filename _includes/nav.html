@@ -17,7 +17,7 @@
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown">DEVELOPMENT <b class="caret"></b></a>
 			<ul class="dropdown-menu">
                 {% for step in site.categories['development'] %} 
-                <li {% if page.title == step.title %}class="active"{% endif %}><a href="{{ step.url }}"> {{ step.wrap_title }} </a></li>
+                <li {% if page.title == step.title %}class="active"{% endif %}><a href="{{ step.url | prepend: site.baseurl }}"> {{ step.wrap_title }} </a></li>
                 {% endfor %}
             </ul>
 		</li>
