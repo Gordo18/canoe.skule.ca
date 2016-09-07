@@ -1,27 +1,27 @@
-### GENERAL SETTINGS ###
-
+### SITE SETTINGS ###
 title: Concrete Canoe
-description: "The University of Toronto Concrete Canoe Team is a multi-disciplinary design team completely managed by students. As you may expect we take concrete, a really dense and tensilely weak material, and turn it on its head. When we are done with it, we have concrete that is not only good in tension but also less dense than water! Each year we design, test, and construct our own canoe to pit it against other universities annually and aim to place among the top concrete canoe teams."
-analytics: #Google analytics code in the format XX-nnnnnnnn-n
 senpai: Henry Lu
-
+analytics: #Google analytics code in the format XX-nnnnnnnn-n
 markdown: kramdown
 permalink: /:categories/:title
 excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
-baseurl: "/canoe.skule.ca"
+baseurl: ""
+exclude: ['README','.htaccess']
 
-colors:  #in hex code if not noted else
-  primary: "#FFC90E" #00b3fe 
-  primary_rgb: "250,250,250" #0,179,254  
-  secondary: "#33004D" #384452, 19827D
+### THEME SETTINGS ###
+
+colors:
+  primary: "#FFC90E"			#default 00b3fe 
+  primary_rgb: "250,250,250"	#default 0,179,254  
+  secondary: "#33004D"			#default 384452, 19827D
   link: "#428bca"
   link_hover: "#01b2fe"
   footer_heading: "#ffffff"
   footer_content: "#ffffff"
 
-exclude: ['README','.htaccess']
+### OTHER SETTINGS ###
 
-### CONTACT SETTINGS ###
+description: "The University of Toronto Concrete Canoe Team is a multi-disciplinary design team completely managed by students. As you may expect we take concrete, a really dense and tensilely weak material, and turn it on its head. When we are done with it, we have concrete that is not only good in tension but also less dense than water! Each year we design, test, and construct our own canoe to pit it against other universities annually and aim to place among the top concrete canoe teams."
 
 social:
   - title: facebook
@@ -38,49 +38,3 @@ address:
     - Canada
 
 email: ut.canoe@gmail.com
-
-### OTHER DATA ###
-    
-members:
-  - name: James Yip-Albin
-    position: Project Manager 
-    img: james.jpg
-  - name: Cory Sulpizi
-    position: Project Manager
-    img: cory.jpg
-  - name: Andy Zhao
-    position: Concrete Lead
-    img: andy.jpg
-  - name: Matthew Garcia
-    position: Concrete Lead
-    img: matthew.jpg
-  - name: David Gerhardt
-    position: Strutural Lead
-    img: david.jpg
-  - name: Liam MacKichan
-    position: Structural Lead
-    img: liam.jpg
-  - name: Machenzie de Carle
-    position: Hull Lead
-    img: mackenzie.jpg
-  - name: Carole Suarez
-    position: Paddling Captain
-    img: carole.jpg
-  - name: Henry Lu
-    position: Webmaster
-    img: henry.jpg
-    social:
-        - title: envelope
-          url: mailto:henry.lu@mail.utoronto.ca
-  - name: Dale Gottlieb
-    position: Sponsorship Director
-    img: dale.jpg
-  - name: Allan Song
-    position: Treasurer
-    img: allan.jpg
-  - name: Ron Suprun
-    position: Finishing Manager
-    img: ron.jpg
-  - name: Gabriel Wolofsky
-    position: Construction Manager
-    img: gabriel.jpg

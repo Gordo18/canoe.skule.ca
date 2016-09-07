@@ -21,7 +21,7 @@ permalink: /about/
     <div class="row centered">
         <h3 class="mb">MEET OUR TEAM</h3>
         
-        {% for member in site.members %}
+        {% for member in site.data.members %}
         <div class="col-sm-4 col-md-3 mug">
             <div class="tpl6">
             <img src="{{ '/assets/img/members/' | prepend: site.baseurl }}{{ member.img }}" alt="">

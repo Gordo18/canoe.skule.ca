@@ -1,79 +1,71 @@
-Solid. A Bootstrap theme for Jekyll.
-============
-![Screenshot](https://st4ple.github.io/solid-jekyll/assets/img/browser.png)
+Canoe Club Website theme
+========================
 
-This is a [Jekyll](http://jekyllrb.com/) port of the [Solid theme](http://www.blacktie.co/2014/05/solid-multipurpose-theme/) by [blacktie.co](http://www.blacktie.co/). Visit the [live demo](https://st4ple.github.io/solid-jekyll/) for a preview. 
+A website is a heavy modification from [st4ple's jekyll version](https://github.com/st4ple/solid-jekyll) of the [Solid theme](http://www.blacktie.co/2014/05/solid-multipurpose-theme/) by [blacktie.co](http://www.blacktie.co/). 
 
-##Usage
-This theme can be customized, built and published straight from GitHub, thanks to [GitHub Pages](https://pages.github.com/). A local installation of Jekyll isn't even necessary!
+Managing the website
+--------------------
 
-[Fork this repository](https://github.com/st4ple/solid-jekyll/fork) to get started. 
-####Customize  
-Most general settings and data like site name, colors, address, etc. can be configured and changed right in the main config file: `/_config.yml`
-The content of the Home page can be changed here: `/home.html`
-The content of the About page can be changed here: `/about.html`
-The content of the Portfolio page can be changed here:`/portfolio.html`
-The content of the Contact page can be changed here:`/contact.html`
-####Add content  
-Delete the demo content and publish your own content.
-#####Blog post
-Create a Blog post by creating a file called `yyyy-mm-dd-name-of-post-like-this.markdown` in the `/_posts/blog/` directory with the following template:
-```markdown
----
-layout: post          #important: don't change this
-title: "Name of post like this"
-date: yyyy-mm-dd hh:mm:ss
-author: Name
-categories:
-- blog                #important: leave this here
-- category1
-- category2
-- ...
-img: post01.jpg       #place image (850x450) with this name in /assets/img/blog/
-thumb: thumb01.jpg    #place thumbnail (70x70) with this name in /assets/img/blog/thumbs/
----
-This text will appear in the excerpt "post preview" on the Blog page that lists all the posts.
-<!--more-->
-This text will not be shown in the excerpt because it is after the excerpt separator.
+This website was built with Jekyll. Jekyll is a static site builder that uses the Liquid Templating System and Markdown Post Rendering (with extra bits like Sass compilers and pagination).
+
+For an example, let's look at **index.html**. It starts out with:
+
 ```
-#####Project post
-Create a Project post to go in your Portfolio by creating a file called `yyyy-mm-dd-name-of-the-project.markdown` in the `/_posts/project/` directory with the following template:
-```markdown
 ---
-layout: project       #important: don't change this
-title:  "Name of the project"
-date: yyyy-mm-dd hh:mm:ss
-author: Name
-categories:
-- project             #important: leave this here
-img: portfolio_10.jpg #place image (600x450) with this name in /assets/img/project/
-thumb: thumb02.jpg
-carousel:
-- single01.jpg        #place image (1280x600) with this name in /assets/img/project/carousel/
-- single02.jpg  
-- ...
-client: Company XY
-website: http://www.internet.com
+layout: default
 ---
-####This is a heading
-This is a regular paragraph. Write as much as you like.
 ```
-#####Question entry
-Create a Question entry (that is listed in the Frequently Asked section on the Home page) in this directory by creating a file called `yyyy-mm-dd-do-i-have-a-question.markdown` in the `/_posts/project/` directory with the following template:
-```markdown
----
-layout: question
-title:  "Do I have a question?"
-date: yyyy-mm-dd hh:mm:ss
-author: First Last
-categories:
-- question            #important: leave this here
----
-####Can I use this theme for my website?
-Of course you can!
-```
-####Publish
-To publish with [GitHub Pages](https://pages.github.com/), simply create a branch called `gh-pages`in your repository. GitHub will build your site automatically and publish it at `http://yourusername.github.io/repositoryname/`.  
-If there are problems with loading assets like CSS files and images, make sure that the `baseurl` in the `_config.yml`is set correctly (it should say `/repositoryname`).
 
-If you want to host your website somewhere else than GitHub (or just would like to customize and build your site locally), please check out the [Jekyll documentation](http://jekyllrb.com/). 
+ - The actual index you find at [canoe.skule.ca](http://canoe.skule.ca), is automatically generated in **_site/index.html**
+ - The layout line tells Jekyll to create a page starting with a layout template found in **_layouts/default.html**.
+ - When Jekyll encounters an {% include %} tag it looks in the include folder for that name. (e.g. **_includes/head.html** will replace {% include head.html %})
+ - **_includes/head.html** has several liquid tags mainly divided into [variables](https://jekyllrb.com/docs/variables/) and [functions](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers). Most are variables that pull information from the website (**_config.yml**), the page (**index.html**), or somewhere else.
+ - When a  {{ content }} tag is found, all the information in the **index.html** after the dashed header replaces the {{ content }} tag.
+ - Other html files on the root of the directory as well as files in **_posts** work the same way, but the generated html file will be located in other places within **_site**. So don't be changing any of the files in **_site** it's all done for you!
+
+### Setting up the repository
+
+#### Installation
+
+ 1. Install [Notepad++](https://notepad-plus-plus.org/download/v6.8.8.html) or an equivalent. Do not use Windows Notepad becuase it does not support [Unix line endings](https://en.wikipedia.org/wiki/Comparison_of_text_editors#Newline_support)  
+ 2. Install Jekyll.  
+   - Standard Installation: [Ruby](https://www.ruby-lang.org/en/downloads/), [RubyDevKit](http://rubyinstaller.org/downloads/), and [Jekyll](http://jekyllrb.com/docs/installation/)  
+   - Windows, Easy: download [Portable Jekyll](https://github.com/madhur/PortableJekyll/releases) and run setpath.cmd. (Use [7zip](http://www.7-zip.org/) if you have trouble)  
+   - Android, Easy: install [Mr. Hyde](https://play.google.com/store/apps/details?id=org.faudroids.mrhyde&hl=en) and get a [GitHub account](https://github.com/join)  
+   - Mac, Extra: Xcode command line tools are a preresquite to install Jekyll  
+ 3. (OPTIONAL) Using [Git](https://git-scm.com/) and [GitHub](https://github.com/join) really helps with managing the website.
+   
+#### Basic Operations
+
+ - DOWNLOADING: If you have Git installed, clone or fork the repo. Otherwise, download the zip file.  
+ - CHECKING WORK: Go to command line and run "jekyll serve" inside the mse.skule.ca folder.  
+ - UPDATING SKULE: Copy the contents of the **_site** folder to **public_html**, deleting everything that previously exist there.
+   - note: Make sure you delete the contents of **public_html** and not the folder itself, so that the index should be found at **~/public_html/index.html**.
+
+### Editing information
+
+#### Members
+
+They are found in **_data/members.yml**. Please mimic all the spaces/quotes/dashes perfectly, as even one extra character can cause unexpected results. Or you can read up on YML to understand what is going on.  
+Images for members are found in **assets/img/members** and have dimensions of 600x600. Other sizes can cause problems.
+
+#### Canoes
+
+Look in the **_posts/canoes** folder and follow the template provided. It should be quite intuitive. All posts must have a YYYY-MM-DD-[name].md format to actually show up on the website. Images are found in the **assets/img/canoes** folder. The thumbnail has a set size of 600x450.
+
+#### Sponsors
+
+Follow the format presented in **_data/sponsors.yml**. Pictures are 500x246 transparent pngs found in **assets/img/sponsors**.  
+The sponsorship package is currently **assets/2015-Sponsorship-Package.pdf** and is hardcoded on line 64 of **sponsors.html**.
+
+#### Development
+
+Look in the **_posts/development** folder and **assets/img/development** for a general idea of the process.
+
+#### Background/color changes
+
+The background image and the little favicon are in the **assets/img** folder.  
+To edit the site colors (making up the navigation, footer, and buttons) look for it in **_config.yml**
+
+
+Voila! Thanks for reading ~ Nanosmasher
